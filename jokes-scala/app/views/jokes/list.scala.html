@@ -1,0 +1,7 @@
+@(jokes: List[Joke])
+
+<div class="jokes">
+  @for(joke <- jokes) {
+    <div><b>@joke.setup</b> | <i>@joke.punchline</i></div>
+  }
+</div>
