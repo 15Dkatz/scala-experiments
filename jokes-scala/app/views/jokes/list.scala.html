@@ -1,7 +1,11 @@
 @(jokes: List[Joke])
 
+<h2>Jokes</h2>
+
 <div class="jokes">
   @for(joke <- jokes) {
     <div><b>@joke.setup</b> | <i>@joke.punchline</i></div>
   }
 </div>
+
+<p><a href="/jokes/new" class="btn">New Joke</a></p>

@@ -1,0 +1,18 @@
+@(jokeForm: Form[Joke])(implicit messages: Messages)
+@import helper._
+
+<h2>New Joke:</h2>
+
+@helper.form(action = routes.JokesController.save()) {
+  <fieldset>
+    @helper.inputText(jokeForm("setup"))
+    @helper.inputText(jokeForm("punchline"))
+  </fieldset>
+  <p>
+    <input
+      type="submit"
+      class="btn primary"
+      value="Submit"
+    />
+  </p>
+}
